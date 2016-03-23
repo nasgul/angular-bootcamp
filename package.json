@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/nasgul/angular-bootcamp.git"
   },
-  "author": "Alexey Lysenko",
+  "author": "Alexey Lysenko & Olga Gnatenko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nasgul/angular-bootcamp/issues"
@@ -22,9 +22,7 @@
     "angular-sanitize": "^1.5.1",
     "angular-schema-form": "^0.8.12",
     "angular-schema-form-bootstrap": "^0.2.0",
-    "angular-ui-bootstrap": "^1.2.4",
-    "angular-ui-router": "^0.2.18",
-    "bootstrap": "^3.3.6",
+    "extract-text-webpack-plugin": "^0.3.8",
     "jquery": "^2.2.1",
     "lodash": "^4.6.1"
   },
@@ -36,6 +34,7 @@
     "exports-loader": "^0.6.2",
     "expose-loader": "^0.7.1",
     "extract-text-webpack-plugin": "^0.3.8",
+    "bootstrap": "^3.3.6",
     "file-loader": "^0.8.1",
     "html-loader": "^0.2.3",
     "imports-loader": "^0.6.3",
@@ -43,6 +42,8 @@
     "less-loader": "^0.6.2",
     "style-loader": "^0.13.0",
     "text-loader": "0.0.1",
-    "url-loader": "^0.5.5"
+    "url-loader": "^0.5.5",
+    "angular-ui-bootstrap": "^1.2.4",
+    "angular-ui-router": "^0.2.18"
   }
 }

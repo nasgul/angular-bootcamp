@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Angular-bootcamp</title>
-  </head>
-  <body ng-app="angularBootCamp">
-    Angular-bootcamp
-    <div ng-controller="mainCtrl as ctrl">
-      <b>{{ ctrl.name }}</b><br>
-    </div>
-    <script src="js/bundle.js"></script>
-  </body>
+    <title>Angular Bootcamp</title>
+    <link rel="stylesheet" type="text/css" href="bundle.css">
+</head>
+<body ng-app="angularBootCamp">
+<ui-view></ui-view>
+<script src="js/bundle.js"></script>
+</body>
 </html>

@@ -1,0 +1,13 @@
+body {
+    background-color: #eeeeee;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.start-btn {
+    border: solid 1px black;
+    background-color: #d9edf7;
+    color: black;
+}
