@@ -1,21 +1,18 @@
 (function () {
     'use strict';
-    require('angular-ui-router');
+    //require('angular-ui-router');
     require('constants');
-
-    require('auth/auth.module');
-    require('auth/auth.controller');
 
     angular
         .module('angularBootCamp')
         .config(configStates)
         .run(mainRun);
 
-    configStates.$inject = ['$stateProvider', 'authModule'];
+    configStates.$inject = ['$stateProvider'];
     mainRun.$inject = ['$state'];
 
     function mainRun(state) {
-        console.log("going to start state");
+        //go to default state
         state.go('start');
     }
 
@@ -41,7 +38,7 @@
                 config: {
                     url: "/admin",
                     controller: 'adminController',
-                    templateUrl: "admin/admin.view.html"
+                    templateUrl: "admin.view.html"
                 }
             },
             {
@@ -49,7 +46,7 @@
                 config: {
                     url: "/student",
                     controller: 'studentController',
-                    templateUrl: "student/student.view.html"
+                    templateUrl: "student.view.html"
                 }
             }
         ];

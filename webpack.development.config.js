@@ -75,22 +75,14 @@ module.exports = {
                 from: path.resolve(__dirname, 'app/auth')
             },
             {
-                from: path.resolve(__dirname, 'app/admin'),
-                to: 'admin'
+                from: path.resolve(__dirname, 'app/admin')
             },
             {
-                from: path.resolve(__dirname, 'app/student'),
-                to: 'student'
+                from: path.resolve(__dirname, 'app/student')
             },
             {
                 from: path.resolve(__dirname, 'assets/images')
             }
-            /*{
-                from: path.resolve(__dirname, 'app')
-            },
-            {
-                from: path.resolve(__dirname, 'app/auth')
-            }*/
         ])
     ]
 

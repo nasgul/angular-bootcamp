@@ -1,3 +1,12 @@
-/**
- * Created by Irony on 03/22/16.
- */
+(function () {
+    'use strict';
+    require('angular');
+
+    angular.module('studentModule')
+        .controller('studentController', studentController);
+
+    function studentController() {
+        var vm = this;
+        console.log("student controller working");
+    }
+})();
