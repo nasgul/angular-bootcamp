@@ -6,8 +6,18 @@ h1, h2 {
     text-align: center;
 }
 
-.start-btn {
-    border: solid 1px black;
-    background-color: #d9edf7;
-    color: black;
+.nav li {
+    min-width: 200px;
+    text-align: center;
 }
+
+.logo {
+    width: 40px;
+    position: absolute;
+    top: 5px;
+}
+
+.navbar-brand {
+    width: 75px;
+}
+

@@ -72,13 +72,16 @@ module.exports = {
                 to: 'index.html'
             },
             {
-                from: path.resolve(__dirname, 'app/auth')
+                from: path.resolve(__dirname, 'app/faculties')
             },
             {
-                from: path.resolve(__dirname, 'app/admin')
+                from: path.resolve(__dirname, 'app/groups')
             },
             {
-                from: path.resolve(__dirname, 'app/student')
+                from: path.resolve(__dirname, 'app/specialities')
+            },
+            {
+                from: path.resolve(__dirname, 'app/start')
             },
             {
                 from: path.resolve(__dirname, 'assets/images')

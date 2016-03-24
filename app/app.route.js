@@ -1,22 +1,17 @@
 (function () {
     'use strict';
-    //require('angular-ui-router');
-    require('constants');
 
     angular
         .module('angularBootCamp')
-        .config(configStates)
-        .run(mainRun);
+        .config(configStates);
 
-    configStates.$inject = ['$stateProvider'];
-    mainRun.$inject = ['$state'];
+    configStates.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-    function mainRun(state) {
-        //go to default state
-        state.go('start');
-    }
+    function configStates(stateProvider, urlRouterProvider) {
+        urlRouterProvider
+            .when('/', '/start')
+            .when('', '/start');
 
-    function configStates(stateProvider) {
         var states = getStates();
         states.forEach(function (state) {
             stateProvider.state(state.name, state.config);
@@ -26,29 +21,45 @@
     function getStates() {
         return [
             {
-                name: 'start',
+                name: 'app',
+                config: {
+                    abstract: true,
+                    url: "",
+                    templateUrl: "app.view.html",
+                }
+            },
+            {
+                name: 'app.start',
                 config: {
                     url: "/start",
-                    controller: 'authController',
+                    controller: 'startController',
                     templateUrl: "start.view.html"
                 }
             },
             {
-                name: 'admin',
+                name: 'app.faculties',
                 config: {
-                    url: "/admin",
-                    controller: 'adminController',
-                    templateUrl: "admin.view.html"
+                    url: "/faculties",
+                    controller: 'facultiesController',
+                    templateUrl: "faculties.view.html"
                 }
             },
             {
-                name: 'student',
+                name: 'app.specialities',
                 config: {
-                    url: "/student",
-                    controller: 'studentController',
-                    templateUrl: "student.view.html"
+                    url: "/specialities",
+                    controller: 'specialitiesController',
+                    templateUrl: "specialities.view.html"
                 }
-            }
+            },
+            {
+                name: 'app.groups',
+                config: {
+                    url: "/groups",
+                    controller: 'groupsController',
+                    templateUrl: "groups.view.html"
+                }
+            },
         ];
     }
 })();
