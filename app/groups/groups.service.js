@@ -1,12 +1,25 @@
-(function() {
+(function () {
     'use strict';
+    require('shared/services/crud.service');
 
     angular.module('angularBootCamp')
-        .factory('groupsService', groupsService);
+        .service('groupsService', groupsService);
 
     groupsService.$inject = ['crudService'];
 
-    function groupsService() {
 
+    function groupsService(crudService) {
+        return {
+            getGroups: getGroups,
+            getGroupById: getGroupById
+        };
+
+        function getGroups() {
+            return crudService.getRecords('group');
+        }
+
+        function getGroupById(id) {
+            return crudService.getGroupById('group', id);
+        }
     }
 })();

@@ -72,6 +72,9 @@ module.exports = {
                 to: 'index.html'
             },
             {
+                from: path.resolve(__dirname, 'app/shared/directives')
+            },
+            {
                 from: path.resolve(__dirname, 'app/faculties')
             },
             {

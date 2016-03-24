@@ -1,0 +1,16 @@
+<h3>
+    {{settings.tableHeader}}
+</h3>
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+    <tr>
+        <th ng-repeat="setting in settings.tableSettings">{{setting.name}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in settings.tableData">
+        <td ng-repeat="setting in settings.tableSettings">
+            {{item[setting.field]}}
+        </td>
+    </tr>
+</table>

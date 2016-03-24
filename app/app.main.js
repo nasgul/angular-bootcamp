@@ -15,8 +15,15 @@
     ]);
 
     require('start/start.controller');
+    require('shared/directives/abcgrid.directive');
+
+    require('faculties/faculties.service');
     require('faculties/faculties.controller');
+
+    require('specialities/specialities.service');
     require('specialities/specialities.controller');
+
+    require('groups/groups.service');
     require('groups/groups.controller');
 
     require('app.route');

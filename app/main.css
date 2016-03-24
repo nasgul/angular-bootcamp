@@ -2,7 +2,7 @@ body {
     background-color: #eeeeee;
 }
 
-h1, h2 {
+h1, h2, h3 {
     text-align: center;
 }
 
@@ -21,3 +21,22 @@ h1, h2 {
     width: 75px;
 }
 
+.welcome {
+    margin-left: 25px;
+}
+
+.abc-grid {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.abc-grid thead {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: #373a3c;
+    font-weight: normal;
+}
+
+.abc-grid td:first-of-type {
+    font-weight: bold;
+}

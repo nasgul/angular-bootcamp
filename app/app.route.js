@@ -1,6 +1,8 @@
 (function () {
     'use strict';
 
+    require('faculties/faculties.service');
+
     angular
         .module('angularBootCamp')
         .config(configStates);
@@ -40,24 +42,41 @@
                 name: 'app.faculties',
                 config: {
                     url: "/faculties",
-                    controller: 'facultiesController',
-                    templateUrl: "faculties.view.html"
+                    controller: 'facultiesController as faculty',
+                    templateUrl: "faculties.view.html",
+                    resolve: {
+                        faculties: function(facultiesService) {
+                            return facultiesService.getFaculties();
+                        }
+                    }
                 }
             },
             {
                 name: 'app.specialities',
                 config: {
                     url: "/specialities",
-                    controller: 'specialitiesController',
-                    templateUrl: "specialities.view.html"
+                    controllerAs: 'vm',
+                    controller: 'specialitiesController as spec',
+                    templateUrl: "specialities.view.html",
+                    resolve: {
+                        specialities: function(specialitiesService) {
+                            return specialitiesService.getSpecialities();
+                        }
+                    }
                 }
             },
             {
                 name: 'app.groups',
                 config: {
                     url: "/groups",
+                    controllerAs: "group",
                     controller: 'groupsController',
-                    templateUrl: "groups.view.html"
+                    templateUrl: "groups.view.html",
+                    resolve: {
+                        groups: function(groupsService) {
+                            return groupsService.getGroups();
+                        }
+                    }
                 }
             },
         ];
