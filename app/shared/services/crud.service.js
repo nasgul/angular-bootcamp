@@ -12,7 +12,8 @@
         return {
             getRecords: getRecords,
             getRecordById: getRecordById,
-            addRecord: addRecord
+            addRecord: addRecord,
+            deleteRecord: deleteRecord
         };
 
         function getRecords(entity) {
@@ -24,7 +25,14 @@
         }
 
         function addRecord(entity, obj) {
-            return $http.post(API_PATH + '/' + entity + "/getRecords/" + id);
+            return $http.post({
+                url: API_PATH + '/' + entity + "/insertData",
+                data: obj
+            });
+        }
+
+        function deleteRecord(entity, id) {
+            return $http.get(API_PATH + '/' + entity + "/del/" + id);
         }
     }
 
