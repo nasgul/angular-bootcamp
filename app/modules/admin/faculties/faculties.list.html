@@ -1,0 +1,19 @@
+<h2>{{vm.title}}</h2>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="faculty in vm.faculties">
+      <th scope="row"><a ui-sref="menu.url">{{faculty.faculty_id}}</a></th>
+      <td>{{faculty.faculty_name}}</td>
+      <td>{{faculty.faculty_description}}</td>
+    </tr>
+
+  </tbody>
+</table>

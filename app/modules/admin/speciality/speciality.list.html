@@ -1,0 +1,19 @@
+<h2>{{vm.title}}</h2>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="speciality in vm.speciality">
+      <th scope="row"><a ui-sref="menu.url">{{speciality.speciality_id}}</a></th>
+      <td>{{speciality.speciality_name}}</td>
+      <td>{{speciality.speciality_code}}</td>
+    </tr>
+
+  </tbody>
+</table>
